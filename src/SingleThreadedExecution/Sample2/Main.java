@@ -1,4 +1,4 @@
-package SingleThreadedExecution;
+package SingleThreadedExecution.Sample2;
 
 /**
  * 创建门，并让三个人不断地通过的类

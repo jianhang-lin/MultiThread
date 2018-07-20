@@ -1,4 +1,4 @@
-package SingleThreadedExecution;
+package SingleThreadedExecution.Sample2;
 
 /**
  * 表示门的类，它会在人们通过门时记录其姓名与出生地

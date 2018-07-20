@@ -1,4 +1,4 @@
-package SingleThreadedExecution;
+package SingleThreadedExecution.Sample2;
 
 /**
  * 表示人的类.人们将不断地通过门

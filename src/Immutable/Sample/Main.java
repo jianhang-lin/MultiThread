@@ -1,4 +1,4 @@
-package Immutable;
+package Immutable.Sample;
 
 public class Main {
     public static void main(String[] args) {

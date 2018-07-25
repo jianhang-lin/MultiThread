@@ -1,4 +1,4 @@
-package Immutable;
+package Immutable.Sample;
 
 public class PrintPersionThread extends Thread {
     private Person person;

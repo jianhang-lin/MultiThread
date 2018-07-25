@@ -1,4 +1,4 @@
-package Immutable;
+package Immutable.Sample;
 
 /**
  * Person类

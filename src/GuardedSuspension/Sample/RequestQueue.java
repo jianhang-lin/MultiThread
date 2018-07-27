@@ -10,7 +10,7 @@ public class RequestQueue {
     private final Queue<Request> queue = new LinkedList<>();
 
     public synchronized Request getRequest() {
-        while (queue.peek() == null) {
+        while (queue.peek() == null) {//守护条件的逻辑非运算
             try {
                 wait();
             } catch (InterruptedException e) {

@@ -12,7 +12,9 @@ public class RequestQueue {
     public synchronized Request getRequest() {
         while (queue.peek() == null) {//守护条件的逻辑非运算
             try {
+                System.out.println(Thread.currentThread().getName() + ": wait() begins, queue = " + queue);
                 wait();
+                System.out.println(Thread.currentThread().getName() + ": wait() ends, queue = " + queue);
             } catch (InterruptedException e) {
 
             }
@@ -28,6 +30,8 @@ public class RequestQueue {
         //继续执行操作（首先会检查守护条件）.
         //因此，无论putRequest中两条语句的顺序如何，RequestQueue类都能安全运行.
         queue.offer(request);
+        System.out.println(Thread.currentThread().getName() + ":notifyAll() begins, queue = " + queue);
         notifyAll();
+        System.out.println(Thread.currentThread().getName() + ":notifyAll() ends, queue = " + queue);
     }
 }

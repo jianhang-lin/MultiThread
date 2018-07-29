@@ -27,6 +27,7 @@ public class Data {
     //若数据内容修改过，则保存到文件中
     public synchronized void save() throws IOException {
         if (!changed) {
+            System.out.println(Thread.currentThread().getName() + " balks");
             return;
         }
         doSave();

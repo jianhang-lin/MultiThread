@@ -1,4 +1,4 @@
-package GuardedSuspension.Balking;
+package Balking.Sample;
 
 public class Main {
     public static void main(String[] args) {

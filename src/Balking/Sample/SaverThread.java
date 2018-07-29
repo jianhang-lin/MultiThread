@@ -1,4 +1,4 @@
-package GuardedSuspension.Balking;
+package Balking.Sample;
 
 import java.io.IOException;
 

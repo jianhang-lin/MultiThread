@@ -22,7 +22,9 @@ public class Table {
         System.out.println(Thread.currentThread().getName() + " puts " + cake);
         //桌子上可以放置的蛋糕最大个数减去当前桌子上已经放置的个数，即可放置蛋糕的位置数要大于0
         while (count >= buffer.length) {
+            System.out.println(Thread.currentThread().getName() + " wait BEGIN");
             wait();
+            System.out.println(Thread.currentThread().getName() + " wait END");
         }
         buffer[tail] = cake;
         tail = (tail + 1) % buffer.length;
@@ -33,7 +35,9 @@ public class Table {
     //拿取蛋糕
     public synchronized String take() throws InterruptedException {
         while (count <= 0) {
+            System.out.println(Thread.currentThread().getName() + " wait BEGIN");
             wait();
+            System.out.println(Thread.currentThread().getName() + " wait END");
         }
         String cake = buffer[head];
         head = (head + 1) % buffer.length;

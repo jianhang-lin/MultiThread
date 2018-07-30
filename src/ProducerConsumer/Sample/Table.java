@@ -17,6 +17,7 @@ public class Table {
     }
 
     //放置蛋糕
+    //加了throws InterruptedException的方法可能会花费时间，但可以取消
     public synchronized void put(String cake) throws InterruptedException {
         System.out.println(Thread.currentThread().getName() + " puts " + cake);
         //桌子上可以放置的蛋糕最大个数减去当前桌子上已经放置的个数，即可放置蛋糕的位置数要大于0
